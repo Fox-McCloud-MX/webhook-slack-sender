@@ -1,2 +1,2 @@
-# spring-boot-template
-Personal spring-boot template project
+# webhook-slack-sender
+Webhook slack sender msg to channel

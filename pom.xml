@@ -3,16 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mx.spring.boot</groupId>
-    <artifactId>spring-boot-template</artifactId>
+    <groupId>com.mx.webhook.slack.sender</groupId>
+    <artifactId>webhook-slack-sender</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>ibm-queue-suscriber</name>
+    <name>webhook-slack-sender</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
     </properties>
 
     <parent>
@@ -22,10 +23,6 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -41,9 +38,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <!--Slack Api requires Kotlin SDK-->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.3.72</version>
+        </dependency>
     </dependencies>
     <build>
-        <finalName>spring-boot-template</finalName>
+        <finalName>webhook-slack-sender</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
